@@ -1,0 +1,71 @@
+Проверка проекта 19.10.2026
+Python 3.12.14, requests 2.34.2, beautifulsoup4 4.15.0
+
+Задание 2.1
+$ python3 -m unittest -v
+test_does_not_count_404_in_url_or_user_agent (test_analyze_logs.LogAnalysisTests.test_does_not_count_404_in_url_or_user_agent) ... ok
+test_empty_log (test_analyze_logs.LogAnalysisTests.test_empty_log) ... ok
+test_invalid_lines_and_ip_are_skipped (test_analyze_logs.LogAnalysisTests.test_invalid_lines_and_ip_are_skipped) ... ok
+test_ipv6_and_another_status (test_analyze_logs.LogAnalysisTests.test_ipv6_and_another_status) ... ok
+test_missing_file (test_analyze_logs.LogAnalysisTests.test_missing_file) ... ok
+test_sample (test_analyze_logs.LogAnalysisTests.test_sample) ... ok
+test_threshold_is_strict (test_analyze_logs.LogAnalysisTests.test_threshold_is_strict) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+OK
+
+Задание 2.2
+$ python3 -m unittest -v
+test_200 (test_check_links.LinkCheckerTests.test_200) ... ok
+test_404 (test_check_links.LinkCheckerTests.test_404) ... ok
+test_500 (test_check_links.LinkCheckerTests.test_500) ... ok
+test_dns_error (test_check_links.LinkCheckerTests.test_dns_error) ... ok
+test_empty_file (test_check_links.LinkCheckerTests.test_empty_file) ... ok
+test_input_is_not_overwritten (test_check_links.LinkCheckerTests.test_input_is_not_overwritten) ... ok
+test_invalid_timeout_rejected (test_check_links.LinkCheckerTests.test_invalid_timeout_rejected) ... ok
+test_malformed_addresses (test_check_links.LinkCheckerTests.test_malformed_addresses) ... ok
+test_missing_input (test_check_links.LinkCheckerTests.test_missing_input) ... ok
+test_redirect (test_check_links.LinkCheckerTests.test_redirect) ... ok
+test_report_format_order_duplicates_and_blank_lines (test_check_links.LinkCheckerTests.test_report_format_order_duplicates_and_blank_lines) ... ok
+test_timeout (test_check_links.LinkCheckerTests.test_timeout) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.658s
+
+OK
+
+Задание 2.3
+$ python3 -m unittest -v
+test_changed_columns (test_currency_rates.CurrencyParserTests.test_changed_columns) ... ok
+test_currency_comes_from_fourth_cell_and_rate_from_fifth (test_currency_rates.CurrencyParserTests.test_currency_comes_from_fourth_cell_and_rate_from_fifth) ... ok
+test_currency_missing_from_table (test_currency_rates.CurrencyParserTests.test_currency_missing_from_table) ... ok
+test_invalid_date (test_currency_rates.CurrencyParserTests.test_invalid_date) ... ok
+test_invalid_number_and_nominal (test_currency_rates.CurrencyParserTests.test_invalid_number_and_nominal) ... ok
+test_missing_table (test_currency_rates.CurrencyParserTests.test_missing_table) ... ok
+test_network_failure_does_not_write_report (test_currency_rates.CurrencyParserTests.test_network_failure_does_not_write_report) ... ok
+test_nominal_and_conversion_to_one_unit (test_currency_rates.CurrencyParserTests.test_nominal_and_conversion_to_one_unit) ... ok
+test_nonbreaking_spaces_in_numbers (test_currency_rates.CurrencyParserTests.test_nonbreaking_spaces_in_numbers) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.015s
+
+OK
+
+Задание 2.4
+$ python3 -m unittest -v
+test_comments_bom_blank_lines_and_duplicates (test_check_pages.PageChangeTests.test_comments_bom_blank_lines_and_duplicates) ... ok
+test_corrupt_state_is_not_overwritten (test_check_pages.PageChangeTests.test_corrupt_state_is_not_overwritten) ... ok
+test_empty_list (test_check_pages.PageChangeTests.test_empty_list) ... ok
+test_error_does_not_stop_other_urls (test_check_pages.PageChangeTests.test_error_does_not_stop_other_urls) ... ok
+test_failed_first_request_does_not_create_baseline (test_check_pages.PageChangeTests.test_failed_first_request_does_not_create_baseline) ... ok
+test_failure_preserves_previous_hash (test_check_pages.PageChangeTests.test_failure_preserves_previous_hash) ... ok
+test_first_unchanged_changed_and_updated_baseline (test_check_pages.PageChangeTests.test_first_unchanged_changed_and_updated_baseline) ... ok
+test_http_error_is_not_hashed (test_check_pages.PageChangeTests.test_http_error_is_not_hashed) ... ok
+test_report_is_replaced_and_hashes_are_persistent (test_check_pages.PageChangeTests.test_report_is_replaced_and_hashes_are_persistent) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.013s
+
+OK

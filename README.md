@@ -22,6 +22,7 @@ src/               — исходные файлы решенных задани
 - [Базовые команды Git](docs/git-commands.md).
 - [Вопросы для защиты](docs/defense.md).
 - [История коммитов проекта](https://github.com/myur000/devops-git-practice/commits/main/).
+- [Pull Request с документацией](https://github.com/myur000/devops-git-practice/pull/1).
 
 ## Решенные задания
 

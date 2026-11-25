@@ -1,0 +1,24 @@
+services:
+  lab:
+    build: .
+    image: devops-task5-lab:local
+    command: /bin/bash /work/start_lab.sh
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:18085:8080"
+    volumes:
+      - .:/work:ro
+      - task5_logs:/var/log
+      - task5_backups:/opt/backups
+    tmpfs:
+      - /run
+    healthcheck:
+      test: ["CMD-SHELL", "kill -0 $$(cat /run/crond.pid) && curl -fsS --max-time 3 http://127.0.0.1:8080/ >/dev/null"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  task5_logs:
+  task5_backups:
